@@ -21,8 +21,19 @@ def getRate(currency):
     return rate / amount
 
 
+def checkCurrency(currency):
+    curs = ["USD", "EUR", "BYN", "KZT"]
+    if currency not in curs:
+        return False
+    else:
+        return True
+
+
 def main():
     currency = input("Enter the name of the currency you want to convert from (USD, EUR, BYN, KZT): ")
+    if not checkCurrency(currency):
+        print("!Wrong format!")
+        return
 
     amount = input("Enter the amount to be converted: ")
 
