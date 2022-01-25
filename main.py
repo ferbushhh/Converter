@@ -6,6 +6,14 @@ def getRub(amount, rate):
     return amount * rate
 
 
+def checkCurrency(currency):
+    curs = ["USD", "EUR", "BYN", "KZT"]
+    if currency not in curs:
+        return False
+    else:
+        return True
+
+
 def getRate(currency):
     res = ""
     try:
@@ -19,14 +27,6 @@ def getRate(currency):
     amount = int(res.find("tr", {"data-currency-code": currency}).find_all("td")[1].text)
     rate = float(res.find("tr", {"data-currency-code": currency}).find_all("td")[3].text)
     return rate / amount
-
-
-def checkCurrency(currency):
-    curs = ["USD", "EUR", "BYN", "KZT"]
-    if currency not in curs:
-        return False
-    else:
-        return True
 
 
 def main():
