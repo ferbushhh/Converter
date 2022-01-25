@@ -29,6 +29,18 @@ def getRate(currency):
     return rate / amount
 
 
+def checkAmount(amount):
+    correct = True
+    for c in amount:
+        if not (c == '.' or c.isdigit()):
+            correct = False
+            break
+    if not correct:
+        return " "
+    else:
+        return float(amount)
+
+
 def main():
     currency = input("Enter the name of the currency you want to convert from (USD, EUR, BYN, KZT): ")
     if not checkCurrency(currency):
@@ -36,6 +48,9 @@ def main():
         return
 
     amount = input("Enter the amount to be converted: ")
+    if checkAmount(amount) == " ":
+        print("!Wrong amount!")
+        return
 
     rate = getRate(currency)
     if rate:
