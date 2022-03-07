@@ -16,6 +16,7 @@ def checkCurrency(currency):
 
 def getRate(currency):
     '''res = ""
+    
     try:
         request = req.get("https://www.banki.ru/products/currency/cb/")
         if request.status_code == 200:  # OK
