@@ -4,9 +4,9 @@ name: Python application
 
 on:
   push:
-    branches: [ master ]
+    branches: [ tests ]
   pull_request:
-    branches: [ master ]
+    branches: [ tests ]
 
   workflow_dispatch:
 
