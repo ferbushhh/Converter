@@ -1,4 +1,4 @@
-![master](https://github.com/ferbushhh/Converter/actions/workflows/maven.yml/badge.svg?branch=master)
+![master](https://github.com/ferbushhh/Converter/actions/workflows/python-app.yml/badge.svg?branch=master)
 
 # Задание №1
 ## Конвертер в рубль из других валют
