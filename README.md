@@ -30,5 +30,5 @@ docker build .
 docker images
 docker run -it <IMAGE>
 ```
-![alt tag](1.png)
+![alt tag](2.png)
 
