@@ -15,9 +15,10 @@ def checkCurrency(currency):
 
 
 def getRate(currency):
-    res = ""
+    '''res = ""
     try:
         request = req.get("https://www.banki.ru/products/currency/cb/")
+        print (request.status_code)
         if request.status_code == 200:  # OK
             res = bs(request.text, "html.parser")
     except Exception:
@@ -26,7 +27,15 @@ def getRate(currency):
         return None
     amount = int(res.find("tr", {"data-currency-code": currency}).find_all("td")[1].text)
     rate = float(res.find("tr", {"data-currency-code": currency}).find_all("td")[3].text)
-    return rate / amount
+    return rate / amount'''
+    if currency == 'USD':
+        return 105.8124
+    elif currency == 'EUR':
+        return 115.6212
+    elif currency == 'BYN':
+        return 34.1628
+    elif currency == 'KZT':
+        return 20.7345/100
 
 
 def checkAmount(amount):
